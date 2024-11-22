@@ -1,2 +1,2 @@
 # delay-based-effects
- Some delay-based effects implimented in Max.
+ Some delay-based effects implemented in Max.
