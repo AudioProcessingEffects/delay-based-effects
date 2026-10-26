@@ -3,7 +3,7 @@
         "fileversion": 1,
         "appversion": {
             "major": 9,
-            "minor": 1,
+            "minor": 2,
             "revision": 0,
             "architecture": "x64",
             "modernui": 1
@@ -51,7 +51,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 176.0, 381.0, 292.0, 241.0 ],
+                    "patching_rect": [ 176.0, 381.0, 292.0, 234.0 ],
                     "text": "Basic Delay:\n\nThe tapin~ object holds a ring buffer of the input signal as defined by the maximum delay time (in this case 1000 ms). \n\nThe is then passed to the tapout~ object which is added to the direct (\"dry') signal (via a *~ object to act as a level control for the delay). \n\nWe can also introduce a feedback loop by taking the output of tapout~ and passing it back into the tapin~ object. \n\nIMPORTANT: The feedback and FX amount values  need to be scaled between 0. and 1. otherwise you overload the output. ",
                     "textcolor": [ 1.0, 1.0, 1.0, 1.0 ]
                 }
@@ -211,7 +211,6 @@
                                 "filename": "eroica.aiff",
                                 "filekind": "audiofile",
                                 "id": "u991001207",
-                                "selection": [ -1.0, -1.0 ],
                                 "loop": 0,
                                 "content_state": {                                }
                             }

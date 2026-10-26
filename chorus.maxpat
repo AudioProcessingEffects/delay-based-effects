@@ -3,14 +3,75 @@
         "fileversion": 1,
         "appversion": {
             "major": 9,
-            "minor": 1,
+            "minor": 2,
             "revision": 0,
             "architecture": "x64",
             "modernui": 1
         },
         "classnamespace": "box",
-        "rect": [ 480.0, 167.0, 803.0, 734.0 ],
+        "rect": [ 296.0, 122.0, 803.0, 734.0 ],
         "boxes": [
+            {
+                "box": {
+                    "id": "obj-2",
+                    "linecount": 2,
+                    "maxclass": "comment",
+                    "numinlets": 1,
+                    "numoutlets": 0,
+                    "patching_rect": [ 238.0, 285.5, 153.0, 33.0 ],
+                    "text": "Increase the FX amount to 1. to fully affect the signal"
+                }
+            },
+            {
+                "box": {
+                    "data": {
+                        "clips": [
+                            {
+                                "absolutepath": "AiryRhodes.wav",
+                                "filename": "AiryRhodes.wav",
+                                "filekind": "audiofile",
+                                "id": "u186002088",
+                                "loop": 1,
+                                "content_state": {
+                                    "loop": 1
+                                }
+                            }
+                        ]
+                    },
+                    "id": "obj-9",
+                    "maxclass": "playlist~",
+                    "mode": "basic",
+                    "numinlets": 1,
+                    "numoutlets": 5,
+                    "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
+                    "parameter_enable": 0,
+                    "patching_rect": [ 66.0, 53.0, 150.0, 30.0 ],
+                    "quality": "basic",
+                    "saved_attribute_attributes": {
+                        "candicane2": {
+                            "expression": ""
+                        },
+                        "candicane3": {
+                            "expression": ""
+                        },
+                        "candicane4": {
+                            "expression": ""
+                        },
+                        "candicane5": {
+                            "expression": ""
+                        },
+                        "candicane6": {
+                            "expression": ""
+                        },
+                        "candicane7": {
+                            "expression": ""
+                        },
+                        "candicane8": {
+                            "expression": ""
+                        }
+                    }
+                }
+            },
             {
                 "box": {
                     "id": "obj-3",
@@ -18,7 +79,7 @@
                     "maxclass": "comment",
                     "numinlets": 1,
                     "numoutlets": 0,
-                    "patching_rect": [ 480.0, 149.0, 180.0, 75.0 ],
+                    "patching_rect": [ 480.0, 149.0, 180.0, 74.0 ],
                     "text": "Using this message object  in conjuntion with the line~ object smoothes any changes in delay time i.e. delay time with a ramp of 20ms"
                 }
             },
@@ -106,58 +167,6 @@
                     "numoutlets": 0,
                     "patching_rect": [ 292.0, 78.0, 34.0, 20.0 ],
                     "text": "rate"
-                }
-            },
-            {
-                "box": {
-                    "clipheight": 29.0,
-                    "data": {
-                        "clips": [
-                            {
-                                "absolutepath": "vs_piano_loop.wav",
-                                "filename": "vs_piano_loop.wav",
-                                "filekind": "audiofile",
-                                "id": "u737004868",
-                                "selection": [ 0.0, 1.0 ],
-                                "loop": 1,
-                                "content_state": {
-                                    "loop": 1
-                                }
-                            }
-                        ]
-                    },
-                    "id": "obj-32",
-                    "maxclass": "playlist~",
-                    "mode": "basic",
-                    "numinlets": 1,
-                    "numoutlets": 5,
-                    "outlettype": [ "signal", "signal", "signal", "", "dictionary" ],
-                    "parameter_enable": 0,
-                    "patching_rect": [ 66.0, 38.0, 150.0, 30.0 ],
-                    "quality": "basic",
-                    "saved_attribute_attributes": {
-                        "candicane2": {
-                            "expression": ""
-                        },
-                        "candicane3": {
-                            "expression": ""
-                        },
-                        "candicane4": {
-                            "expression": ""
-                        },
-                        "candicane5": {
-                            "expression": ""
-                        },
-                        "candicane6": {
-                            "expression": ""
-                        },
-                        "candicane7": {
-                            "expression": ""
-                        },
-                        "candicane8": {
-                            "expression": ""
-                        }
-                    }
                 }
             },
             {
@@ -391,21 +400,6 @@
             },
             {
                 "patchline": {
-                    "destination": [ "obj-45", 0 ],
-                    "order": 1,
-                    "source": [ "obj-32", 0 ]
-                }
-            },
-            {
-                "patchline": {
-                    "destination": [ "obj-8", 0 ],
-                    "midpoints": [ 75.5, 98.0, 128.5, 98.0 ],
-                    "order": 0,
-                    "source": [ "obj-32", 0 ]
-                }
-            },
-            {
-                "patchline": {
                     "destination": [ "obj-5", 1 ],
                     "order": 0,
                     "source": [ "obj-4", 0 ]
@@ -449,6 +443,20 @@
                 "patchline": {
                     "destination": [ "obj-7", 0 ],
                     "source": [ "obj-8", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-45", 0 ],
+                    "order": 1,
+                    "source": [ "obj-9", 0 ]
+                }
+            },
+            {
+                "patchline": {
+                    "destination": [ "obj-8", 0 ],
+                    "order": 0,
+                    "source": [ "obj-9", 0 ]
                 }
             }
         ],
